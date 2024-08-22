@@ -24,11 +24,10 @@
 
         .header {
             background-color: #64B5F6;
-            min-height: 12%;
+            height: auto;
             padding: 10px 15px;
             color: white;
-            overflow-y: auto;
-            transition: height 0.3s ease;
+            transition: max-height 0.3s ease;
         }
 
         .header-buttons {
@@ -54,13 +53,13 @@
         .line-container {
             display: flex;
             flex-direction: column; 
+            gap: 5px;
         }
 
         .line {
-            box-sizing: border-box;
-            padding: 8px;
-            border-bottom: 1px solid #1E88E5; 
             font-size: 14px; 
+            color: #0D47A1;
+            text-align: center; 
         }
 
         .content {
@@ -168,24 +167,17 @@
 
         function showLines() {
             let lineContainer = document.getElementById('lineContainer');
-            let newLine = document.createElement('div');
+            let newLine = document.createElement('p'); 
             newLine.className = 'line';
             newLine.innerText = 'Line ' + index;
             lineContainer.appendChild(newLine);
             index++;
-
-            
-            let header = document.getElementById('header');
-            header.style.height = (header.scrollHeight + 20) + 'px';
         }
 
         function clearLines() {
             let lineContainer = document.getElementById('lineContainer');
             lineContainer.innerHTML = '';
             index = 1;
-
-            let header = document.getElementById('header');
-            header.style.height = '12%';
         }
     </script>
 </body>
