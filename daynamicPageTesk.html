@@ -10,9 +10,9 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            font-family: 'Verdana', sans-serif; /* تغيير الخط لجعله أبسط */
+            font-family: 'Verdana', sans-serif;
             box-sizing: border-box;
-            background-color: #F5F5F5; /* لون خلفية محايد وبسيط */
+            background-color: #F5F5F5; 
         }
 
         .container {
@@ -24,8 +24,8 @@
 
         .header {
             background-color: #64B5F6;
-            min-height: 12%; /* ارتفاع بسيط للـ header */
-            padding: 10px 15px; /* تقليل الحشوة */
+            min-height: 12%;
+            padding: 10px 15px;
             color: white;
             overflow-y: auto;
             transition: height 0.3s ease;
@@ -33,39 +33,39 @@
 
         .header-buttons {
             display: flex;
-            gap: 10px; /* تقليل المسافة بين الأزرار */
+            gap: 10px; 
             margin-bottom: 10px;
         }
 
         .header-button {
-            background-color: #42A5F5; /* لون أقل تشبعًا */
+            background-color: #42A5F5;
             color: white;
             border: none;
-            padding: 8px 20px; /* تقليل حجم الأزرار */
+            padding: 8px 20px;
             cursor: pointer;
-            border-radius: 3px; /* تقليل الحواف المستديرة */
+            border-radius: 3px; 
             transition: background-color 0.2s ease;
         }
 
         .header-button:hover {
-            background-color: #1E88E5; /* تغيير بسيط للون عند التمرير */
+            background-color: #1E88E5; 
         }
 
         .line-container {
             display: flex;
-            flex-direction: column; /* تغيير الاتجاه إلى عمودي */
+            flex-direction: column; 
         }
 
         .line {
             box-sizing: border-box;
             padding: 8px;
-            border-bottom: 1px solid #1E88E5; /* لون الخط بسيط */
-            font-size: 14px; /* حجم خط أصغر */
+            border-bottom: 1px solid #1E88E5; 
+            font-size: 14px; 
         }
 
         .content {
             display: flex;
-            height: calc(78% - 20px); /* ارتفاع بسيط */
+            height: calc(78% - 20px);
             padding: 10px 15px;
         }
 
@@ -74,14 +74,14 @@
             width: 25%;
             display: flex;
             flex-direction: column;
-            padding: 15px; /* تقليل الحشوة */
+            padding: 15px; 
         }
 
         .sidebar div {
             margin-bottom: 10px;
             padding: 8px;
             background-color: #90CAF9;
-            border-radius: 3px; /* حواف أقل استدارة */
+            border-radius: 3px;
             color: #0D47A1;
         }
 
@@ -91,7 +91,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 15px; /* تقليل الحشوة */
+            padding: 15px;
         }
 
         .content-box {
@@ -103,7 +103,7 @@
             justify-content: center;
             border-radius: 5px;
             color: white;
-            font-size: 16px; /* حجم خط أصغر */
+            font-size: 16px;
         }
 
         .content-box:last-child {
@@ -117,7 +117,7 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 18px; /* حجم خط أصغر */
+            font-size: 18px; 
             text-align: center;
         }
 
@@ -174,7 +174,7 @@
             lineContainer.appendChild(newLine);
             index++;
 
-            // تعديل ارتفاع الـ header بناءً على عدد الأسطر
+            
             let header = document.getElementById('header');
             header.style.height = (header.scrollHeight + 20) + 'px';
         }
@@ -184,7 +184,6 @@
             lineContainer.innerHTML = '';
             index = 1;
 
-            // إعادة ضبط ارتفاع الـ header
             let header = document.getElementById('header');
             header.style.height = '12%';
         }
